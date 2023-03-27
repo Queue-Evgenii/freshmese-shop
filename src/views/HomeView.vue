@@ -1,13 +1,17 @@
 <template>
   <layout-default>
-    <div class="home"></div>
+    <div class="home _container">
+      <sidebar-default></sidebar-default>
+      <div class="content"></div>
+    </div>
   </layout-default>
 </template>
 
 <script>
+import SidebarDefault from "@/components/SidebarDefault.vue";
 export default {
   name: "HomeView",
-  components: {},
+  components: { SidebarDefault },
   data() {
     return {
       products: [],
