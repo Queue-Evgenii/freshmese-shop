@@ -53,6 +53,9 @@ a{color: inherit;}
 ._label-item{
   color: #6A983C;
 }
+._p-16{
+  padding: 16px;
+}
 *{
   padding: 0;
   margin: 0;

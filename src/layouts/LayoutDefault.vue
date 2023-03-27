@@ -2,7 +2,7 @@
   <div class="layout-default">
     <header class="header">
       <TopHeader class="header__top" :headerMenu="headerMenu" />
-      <div class="header__content"></div>
+      <ContentHeader class="header__content" />
       <div class="header__bottom"></div>
     </header>
     <main class="main">
@@ -14,9 +14,11 @@
 
 <script>
 import TopHeader from "@/components/header/TopHeader";
+import ContentHeader from "@/components/header/ContentHeader";
 export default {
   name: "LayoutDefault",
   components: {
+    ContentHeader,
     TopHeader,
   },
   data() {
