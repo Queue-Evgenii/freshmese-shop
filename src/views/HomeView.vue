@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    {{ products }}
-  </div>
+  <layout-default>
+    <div class="home"></div>
+  </layout-default>
 </template>
 
 <script>
