@@ -7,7 +7,9 @@
     <li class="menu-list-item"><a href="#">Drinks</a></li>
     <li class="menu-list-item"><a href="#">Kitchen</a></li>
   </ul>
-  <a href="#" class="more">more</a>
+  <div class="more-wrapper">
+    <a href="#" class="more">More categories</a>
+  </div>
 </template>
 
 <script>
@@ -38,5 +40,19 @@ export default {
 .list .menu-list-item a {
   text-decoration: underline;
   color: #6A983C;
+}
+.more-wrapper {
+  padding: 15px;
+  background: #f5f5f5;
+  max-width: 180px;
+}
+.more-wrapper a {
+  font-style: normal;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #151515;
+  display: block;
+  background: url("@/assets/img/icons/arrow.png") no-repeat 130px 6px;
 }
 </style>
