@@ -1,7 +1,7 @@
 <template>
   <div class="top-header">
-    <div class="top-header__container _container">
-      <div class="top-header__row _flex _p-16">
+    <div class="top-header__container _container _p-16">
+      <div class="top-header__row _flex">
         <div class="top-header__contact contact-header _flex _gap-35">
           <span class="top-header__label _label-item">Chat with us</span>
           <a
@@ -47,8 +47,9 @@ export default {
 <style lang="stylus">
 .top-header{
   &__row{
-     justify-content: space-between;
-     border-bottom: 1px solid rgba(21, 21, 21, 0.2);
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(21, 21, 21, 0.2);
+    padding: 16px 0;
   }
   &__contact{
    a {color: #151515;}

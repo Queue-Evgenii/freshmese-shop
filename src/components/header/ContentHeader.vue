@@ -5,7 +5,7 @@
         <div class="content-header__items content-header__logo">
           <img src="@/assets/img/freshenese.png" alt="" />
         </div>
-        <div class="content-header__items content-header__search"></div>
+        <SearchHeader class="content-header__items content-header__search" />
         <div class="content-header__items content-header__actions"></div>
       </div>
     </div>
@@ -13,8 +13,13 @@
 </template>
 
 <script>
+import SearchHeader from "@/components/header/SearchHeader.vue";
+
 export default {
   name: "ContentHeader",
+  components: {
+    SearchHeader,
+  },
 };
 </script>
 
@@ -24,7 +29,7 @@ export default {
      padding: 40px 0;
   }
   &__logo{
-  flex: 0 0 175px
+    flex: 0 0 175px
     width: 175px;
     height: 20px;
     position: relative;
@@ -36,6 +41,12 @@ export default {
       height: 100%;
       object-fit: contain;
     }
+  }
+  &__search{
+    flex: 0 1 500px;
+  }
+  &__actions{
+    flex: 0 0 100px;
   }
 }
 </style>
