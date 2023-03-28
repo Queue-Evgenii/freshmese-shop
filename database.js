@@ -172,15 +172,15 @@ export const getProductByCategoryId = (id) => {
 const categories = [
   {
     id: 1,
-    name: "Category 1",
+    name: "Bakery",
   },
   {
     id: 2,
-    name: "Category 2",
+    name: "Fruit and vegetables",
   },
   {
     id: 3,
-    name: "Category 3",
+    name: "Meat and fish",
   },
 ];
 

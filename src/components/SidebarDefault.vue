@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import SidebarMenuItem from "@/components/SidebarMenuItem.vue";
+import SidebarMenuItem from "@/components/sidebar/SidebarMenuItem.vue";
 export default {
   name: "SidebarDefault",
   components: { SidebarMenuItem },

@@ -24,6 +24,7 @@ export default {
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 15px;
+  font-weight: 600;
 }
 .list {
   margin-bottom: 38px;
@@ -45,6 +46,7 @@ export default {
   padding: 15px;
   background: #f5f5f5;
   max-width: 180px;
+  border-radius: 12px;
 }
 .more-wrapper a {
   font-style: normal;

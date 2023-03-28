@@ -3,7 +3,7 @@
     <header class="header">
       <TopHeader class="header__top" :headerMenu="headerMenu" />
       <ContentHeader class="header__content" />
-      <div class="header__bottom"></div>
+      <BottomHeader class="header__bottom" />
     </header>
     <main class="main">
       <slot></slot>
@@ -15,9 +15,11 @@
 <script>
 import TopHeader from "@/components/header/TopHeader";
 import ContentHeader from "@/components/header/ContentHeader";
+import BottomHeader from "@/components/header/BottomHeader.vue";
 export default {
   name: "LayoutDefault",
   components: {
+    BottomHeader,
     ContentHeader,
     TopHeader,
   },
