@@ -1,14 +1,16 @@
 <template>
-  <div class="menu-item-name">Category menu</div>
-  <ul class="list">
-    <li class="menu-list-item"><a href="#">Bakery</a></li>
-    <li class="menu-list-item"><a href="#">Fruit and vegetables</a></li>
-    <li class="menu-list-item"><a href="#">Meat and fish</a></li>
-    <li class="menu-list-item"><a href="#">Drinks</a></li>
-    <li class="menu-list-item"><a href="#">Kitchen</a></li>
-  </ul>
-  <div class="more-wrapper">
-    <a href="#" class="more">More categories</a>
+  <div class="sidebar-menu-wrapper">
+    <div class="menu-item-name">Category menu</div>
+    <ul class="list">
+      <li class="menu-list-item"><a href="#">Bakery</a></li>
+      <li class="menu-list-item"><a href="#">Fruit and vegetables</a></li>
+      <li class="menu-list-item"><a href="#">Meat and fish</a></li>
+      <li class="menu-list-item"><a href="#">Drinks</a></li>
+      <li class="menu-list-item"><a href="#">Kitchen</a></li>
+    </ul>
+    <div class="more-wrapper">
+      <a href="#" class="more">More categories</a>
+    </div>
   </div>
 </template>
 
@@ -19,6 +21,9 @@ export default {
 </script>
 
 <style lang="stylus">
+.sidebar-menu-wrapper {
+  padding: 20px 0;
+}
 .menu-item-name {
   color: #151515;
   font-size: 18px;

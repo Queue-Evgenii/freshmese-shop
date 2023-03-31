@@ -1,17 +1,20 @@
 <template>
   <layout-default>
-    <div class="home _container">
+    <div class="home _container _flex">
       <sidebar-default></sidebar-default>
-      <div class="content"></div>
+      <div class="content">
+        <product-wrapper></product-wrapper>
+      </div>
     </div>
   </layout-default>
 </template>
 
 <script>
+import ProductWrapper from "@/components/content/ProductWrapper.vue";
 import SidebarDefault from "@/components/SidebarDefault.vue";
 export default {
   name: "HomeView",
-  components: { SidebarDefault },
+  components: { ProductWrapper, SidebarDefault },
   data() {
     return {
       products: [],
@@ -35,3 +38,8 @@ export default {
   },
 };
 </script>
+<style lang="stylus">
+.content {
+  padding: 60px 0px;
+}
+</style>

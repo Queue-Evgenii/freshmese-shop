@@ -1,5 +1,5 @@
 <template>
-  <aside class="sidebar-wrapper">
+  <aside class="sidebar-wrapper sidebar">
     <sidebar-menu-item />
     <sidebar-menu-item />
     <sidebar-menu-item />

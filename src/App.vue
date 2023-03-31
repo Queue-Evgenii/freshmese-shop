@@ -56,6 +56,12 @@ a{color: inherit;}
 ._p-16{
   padding: 16px;
 }
+.content {
+  flex: 1 1 auto;
+}
+.sidebar {
+  flex: 0 0 270px;
+}
 *{
   padding: 0;
   margin: 0;
