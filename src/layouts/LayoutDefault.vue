@@ -1,9 +1,17 @@
 <template>
   <div class="layout-default">
     <header class="header">
-      <TopHeader class="header__top" :headerMenu="headerMenu" />
-      <ContentHeader class="header__content" />
-      <BottomHeader class="header__bottom" />
+      <top-header
+        v-if="windowWidth >= 678"
+        class="header__top"
+        :headerMenu="headerMenu"
+      />
+      <content-header
+        class="header__content"
+        :windowWidth="windowWidth"
+        :headerMenu="headerMenu"
+      />
+      <bottom-header v-if="windowWidth >= 678" class="header__bottom" />
     </header>
     <main class="main">
       <slot></slot>
@@ -42,7 +50,16 @@ export default {
           url: "/careers",
         },
       ],
+      windowWidth: window.innerWidth,
     };
+  },
+  methods: {
+    checkWidth() {
+      this.windowWidth = window.innerWidth;
+    },
+  },
+  mounted() {
+    window.addEventListener("resize", this.checkWidth);
   },
 };
 </script>

@@ -60,7 +60,10 @@ a{color: inherit;}
   flex: 1 1 auto;
 }
 .sidebar {
-  flex: 0 0 270px;
+  flex: 0 0 200px;
+}
+._text-nowrap{
+	white-space: nowrap;
 }
 *{
   padding: 0;

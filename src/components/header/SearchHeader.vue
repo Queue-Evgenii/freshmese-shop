@@ -11,7 +11,9 @@
         id=""
         placeholder="Search Products, categories ..."
       />
-      <img src="@/assets/img/icons/search.png" alt="" />
+      <button type="button" class="_flex">
+        <img src="@/assets/img/icons/search.png" alt="" />
+      </button>
     </div>
   </div>
 </template>
@@ -46,15 +48,30 @@ export default {
     }
   }
   &__input{
-   flex: 0 1 330px;
-   padding-left: 18px;
-   align-items: center;
+    flex: 1 1 330px;
+    padding-left: 18px;
+		width: 150px;
+    align-items: center;
     input {
       padding: 0 5px;
       flex: 1 1 auto;
-      min-width: 150px;
+      min-width: 100px;
       background-color: transparent;
     }
+    button{
+      align-items: center;
+    }
   }
+}
+
+@media(max-width: 769px) {
+	.search-header{
+		&__categories{
+			padding-right: 15px;
+		}
+		&__input{
+			padding-left: 8px;
+		}
+	}
 }
 </style>

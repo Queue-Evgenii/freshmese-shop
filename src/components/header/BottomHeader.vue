@@ -57,4 +57,16 @@ export default {
     }
   }
 }
+@media(max-width: 678px){
+	.bottom-header{
+		background-color: transparent;
+		&__categories{
+			flex-direction: column;
+			align-items: flex-start;
+			a{
+				font-size: 18px
+			}
+		}
+	}
+}
 </style>

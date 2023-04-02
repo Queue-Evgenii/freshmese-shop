@@ -1,23 +1,23 @@
 <template>
   <div class="product-wrapper">
-    <good-item></good-item>
-    <good-item></good-item>
-    <good-item></good-item>
+    <product-item></product-item>
+    <product-item></product-item>
+    <product-item></product-item>
   </div>
 </template>
 
 <script>
-import GoodItem from "@/components/content/GoodItem.vue";
+import ProductItem from "@/components/content/ProductItem";
 export default {
   name: "ProductWrapper",
-  components: { GoodItem },
+  components: { ProductItem },
 };
 </script>
 
 <style>
 .product-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, auto));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 270px));
+  gap: 32px;
 }
 </style>
