@@ -7,7 +7,9 @@
           :key="item.id"
           class="bottom-header__item"
         >
-          <router-link to="/">{{ item.name }}</router-link>
+          <router-link :to="{ name: 'catalog', params: { name: item.url } }">{{
+            item.name
+          }}</router-link>
         </li>
       </ul>
     </div>
@@ -27,7 +29,7 @@ export default {
       this.$store
         .dispatch("getCategories")
         .then((res) => {
-          this.categoryList = res;
+          this.categoryList = res.slice(0, 6);
         })
         .catch((err) => {
           console.log("getCategories", err);

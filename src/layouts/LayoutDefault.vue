@@ -1,65 +1,44 @@
 <template>
   <div class="layout-default">
-    <header class="header">
-      <top-header
-        v-if="windowWidth >= 678"
-        class="header__top"
-        :headerMenu="headerMenu"
-      />
-      <content-header
-        class="header__content"
-        :windowWidth="windowWidth"
-        :headerMenu="headerMenu"
-      />
-      <bottom-header v-if="windowWidth >= 678" class="header__bottom" />
-    </header>
+    <CartComponent @closeCart="closeCart" :class="{ active: isCartActive }" />
+    <HeaderComponent @openCart="openCart" />
     <main class="main">
       <slot></slot>
     </main>
-    <footer class="footer"></footer>
+    <FooterComponent />
   </div>
 </template>
 
 <script>
-import TopHeader from "@/components/header/TopHeader";
-import ContentHeader from "@/components/header/ContentHeader";
-import BottomHeader from "@/components/header/BottomHeader.vue";
+import CartComponent from "@/components/cart/CartComponent.vue";
+import HeaderComponent from "@/components/header/HeaderComponent.vue";
+import FooterComponent from "@/components/footer/FooterComponent.vue";
 export default {
   name: "LayoutDefault",
   components: {
-    BottomHeader,
-    ContentHeader,
-    TopHeader,
+    CartComponent,
+    HeaderComponent,
+    FooterComponent,
   },
   data() {
     return {
-      headerMenu: [
-        {
-          id: 1,
-          name: "Blog",
-          url: "/blog",
-        },
-        {
-          id: 2,
-          name: "About Us",
-          url: "/about",
-        },
-        {
-          id: 3,
-          name: "Careers",
-          url: "/careers",
-        },
-      ],
-      windowWidth: window.innerWidth,
+      isCartActive: false,
     };
   },
   methods: {
-    checkWidth() {
-      this.windowWidth = window.innerWidth;
+    getCartListFromLocalStorege() {
+      this.$store.state.cartList =
+        JSON.parse(localStorage.getItem("cart_list")) || [];
+    },
+    openCart() {
+      this.isCartActive = true;
+    },
+    closeCart() {
+      this.isCartActive = false;
     },
   },
   mounted() {
-    window.addEventListener("resize", this.checkWidth);
+    this.getCartListFromLocalStorege();
   },
 };
 </script>

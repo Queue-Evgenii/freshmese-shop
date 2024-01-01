@@ -2,9 +2,9 @@
   <div class="content-header">
     <div class="content-header__container _container">
       <div class="content-header__row _flex">
-        <div class="content-header__logo">
+        <router-link to="/" class="content-header__logo">
           <img src="@/assets/img/freshenese.png" alt="" />
-        </div>
+        </router-link>
         <SearchHeader class="content-header__search" />
         <div class="content-header__actions actions-header _flex">
           <div class="actions-header__item">
@@ -12,11 +12,11 @@
               <img src="@/assets/img/icons/account.png" alt="" />
             </router-link>
           </div>
-          <div class="actions-header__item">
+          <div @click="openCart()" class="actions-header__item">
             <span>0</span>
-            <router-link to="/">
+            <button>
               <img src="@/assets/img/icons/cart.png" alt="" />
-            </router-link>
+            </button>
           </div>
           <div
             v-if="windowWidth <= 678"
@@ -67,6 +67,11 @@ export default {
     return {
       isBurgerOpen: false,
     };
+  },
+  methods: {
+    openCart() {
+      this.$emit("openCart");
+    },
   },
 };
 </script>
